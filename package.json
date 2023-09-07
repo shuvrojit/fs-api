@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon /src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint . --ext .ts",
+    "build": "tsc",
+    "start": "node build/index.js"
   },
   "keywords": [],
   "author": "Shuvrojit Biswas <jsuvro17@gmail.com>",
@@ -11,5 +15,16 @@
   "dependencies": {
     "@types/express": "^4.17.17",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
